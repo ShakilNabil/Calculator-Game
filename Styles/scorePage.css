@@ -99,24 +99,11 @@
   -webkit-background-clip: text; /* Clip text to gradient */
   border-radius: 10px;
   border: solid 3px black;
-  animation: glow 0.5s infinite; /* Add glowing animation */
+  animation: glow 1s infinite; /* Add glowing animation */
+  text-shadow: 0 0 10px #7f14a5, 0 0 20px #7f14a5, 0 0 30px #7f14a5; /* Initial glow effect */;
 }
 
-@keyframes glow {
-  0% {
-    text-shadow: 0 0 10px #7f14a5, 0 0 20px #7f14a5, 0 0 30px #7f14a5; /* Initial glow effect */
-  }
-  1% {
-    text-shadow: 0 0 20px #7f14a5, 0 0 30px #7f14a5, 0 0 40px #ff6#7f14a599; /* Enhanced glow effect */
-  }
-}
-.glow {
-  width: 200px;
-  height: 200px;
-  background-color: #333;
-  border-radius: 50%;
-  box-shadow: 0 0 50px rgba(0, 255, 255, 0.7); /* Adjusted glow color and intensity */
-}
+
 .button-container {
   display: flex;
   justify-content: space-between;
