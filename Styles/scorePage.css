@@ -1,4 +1,4 @@
-body {
+/*body {
   margin: 0;
   padding: 0;
   background-color: #2A2A2A;
@@ -26,7 +26,7 @@ body {
 .final-score-text {
   color: white;
   text-align: center;
-  font-size: 65px;
+  font-size: 60px;
   background-color: #4A0C60;
   width: 50%;
   border-radius: 10px;
@@ -52,6 +52,92 @@ body {
 
 .button-container button:hover {
   background-color: #7f14a5;
+}
+
+.button-container {
+  text-align: center;
+}
+*/
+.score-container {
+  position: relative;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.score-container::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: 
+    linear-gradient(135deg, #4A0C60, #7F14A5),
+    url("../Images/rough-texture.jpg");
+  background-color: #4A0C60;
+  opacity: 0.9;
+  mix-blend-mode: multiply;
+  z-index: -1;
+  transform: rotate(45deg);
+  background-repeat: repeat;
+  background-size: 300px;
+  background-position: center;
+  filter: contrast(150%) brightness(80%) saturate(150%);
+}
+
+.final-score-text {
+  color: white;
+  text-align: center;
+  font-size: 60px;
+  background: linear-gradient(135deg, #ffcc00, #ff6699); /* Highlight with gradient */
+  background-clip: text;
+  -webkit-background-clip: text; /* Clip text to gradient */
+  border-radius: 10px;
+  border: solid 3px black;
+  animation: glow 0.5s infinite; /* Add glowing animation */
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px #7f14a5, 0 0 20px #7f14a5, 0 0 30px #7f14a5; /* Initial glow effect */
+  }
+  1% {
+    text-shadow: 0 0 20px #7f14a5, 0 0 30px #7f14a5, 0 0 40px #ff6#7f14a599; /* Enhanced glow effect */
+  }
+}
+.glow {
+  width: 200px;
+  height: 200px;
+  background-color: #333;
+  border-radius: 50%;
+  box-shadow: 0 0 50px rgba(0, 255, 255, 0.7); /* Adjusted glow color and intensity */
+}
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.button-container button {
+  color: white;
+  font-size: 30px;
+  background-color: #7f14a5; /* Highlight button with celebratory color */
+  border-radius: 10px;
+  border: solid 3px black;
+  font-family: verdana;
+  width: 250px;
+  height: 100px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add smooth transition */
+}
+
+.button-container button:hover {
+  background-color: #9225b9; /* Change color on hover */
 }
 
 .button-container {
